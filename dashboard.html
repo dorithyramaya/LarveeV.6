@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Larvee Version 6</title>
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="../css/lv-sidenav.css">
+
+    <!--Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/ab8498b080.js" crossorigin="anonymous"></script>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!--Chart JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+</head>
+<body>
+<div class="grid-container">
+    <div class="menu-icon">
+        <i class="fas fa-bars" style="background:transparent;"></i>
+        <i class="fad fa-arrow-alt-from-left" aria-hidden="true"></i>
+    </div>
+
+    <!--Top Navigation-->
+    <nav class="lv-topnav">
+        <div class="search text-center px-4 py-3 mt-2 gt-search">
+            <input type="text" class="form-control w-100 border-0 bg-light" placeholder="GO-TO">
+        </div>
+
+        <i class="fa-solid fa-circle-user fa-2x"></i>
+    </nav>
+
+    <!--Side Navigation-->
+    <section class="sidenav" id="sidenav-left">
+        <div class="lv-sidenav" id="left-side">
+            <div class="sidenav__close-icon">
+                <i class="fas fa-times sidenav__brand-close lv-close-icon"></i>
+            </div>
+            <!--Larvee Logo-->
+            <div class="logo">
+                <img src="img/larvee-logo-backend.png" alt="larvee-logo" class="lv-logo">
+                <i class="fas fa-bars bar"></i>
+            </div>
+
+            <ul class="sidenav__list">
+                <!--Search-->
+                <div class="search text-center px-4 py-3 mt-2">
+
+                    <input type="text" class="form-control w-100 border-0 bg-light" placeholder="Search here">
+                </div>
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fas fa-chart-pie "></i><span class="sidenav-text">Dashboard</span></i>
+                    </a>
+                </li>
+                <li class="sidenav-drop list-none">
+                    <a href="#" class="js-cat" id="js-cat">
+                        <i class="fas fa-shopping-cart center"></i><span class="sidenav-text">Online Store</span><i class="fas fa-chevron-down caret"></i>
+                        <ul class="sidenav__submenu list-none">
+                            <li><a href="#"></i> Customer</a></li>
+                            <li><a href="#"></i> Product</a></li>
+                            <li><a href="#"></i> Composite Product</a></li>
+                            <li><a href="#"></i> Order</a></li>
+                            <li><a href="#"></i> Payment</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="sidenav-drop">
+                    <a href="#" class="js-cate" id="js-cate">
+                        <i class="fas fa-file-alt center"></i></i><span class="sidenav-text">Page Builder</span><i class="fas fa-chevron-down icon0"></i>
+                        <ul class="sidenav__submenu">
+                            <li><a href="#"></i> Page</a></li>
+                            <li><a href="#"></i> Add Page</a></li>
+                            <li><a href="#"></i> Page Category</a></li>
+                            <li><a href="#"></i>Page Tag</a></li>
+                        </ul>
+
+                    </a>
+                </li>
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fas fa-edit center"></i></i><span class="sidenav-text">Blog Post</span><i class="fas fa-chevron-down icon"></i>
+                        <ul class="sidenav__submenu">
+                            <li><a href="#"></i> Blog Post</a></li>
+                            <li><a href="#"></i> Add Blog Post</a></li>
+                            <li><a href="#"></i> Post Category</a></li>
+                            <li><a href="#"></i> Post Tag</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fab fa-searchengin center "></i><span class="sidenav-text">SEO</span>
+                        <i class="fas fa-chevron-down icon1"></i>
+                        <ul class="sidenav__submenu">
+                            <li><a href="#"></i> SEO Page</a></li>
+                            <li><a href="#"></i> SEO Blog Post</a></li>
+                            <li><a href="#"></i> SEO Image</a></li>
+                            <li><a href="#"></i> SEO Category</a></li>
+                            <li><a href="#"></i> SEO Product</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fas fa-briefcase center"></i><span class="sidenav-text">Theme</span><i class="fas fa-chevron-down icon2"></i>
+                        <!--<ul class="sidenav__submenu">
+                            <li><a href="#"></i> General</a></li>
+                            <li><a href="#"></i> Navigation</a></li>
+                            <li><a href="#"></i> Header</a></li>
+                            <li><a href="#"></i> Footer</a></li>
+                        </ul>-->
+                    </a>
+                </li>
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fas fa-folder center"></i><span class="sidenav-text">Form</span><i class="fas fa-chevron-down icon3"></i>
+                        <!--  <ul class="sidenav__submenu">
+                              <li><a href="#"></i> Form</a></li>
+                              <li><a href="#"></i> Add Form</a></li>
+                          </ul>-->
+
+                    </a>
+                </li>
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fas fa-th-large center"></i></i><span class="sidenav-text">Extension</span><i class="fas fa-chevron-down icon4"></i>
+                    </a>
+                </li>
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fas fa-lock  center"></i><span class="sidenav-text">Security</span><i class="fas fa-chevron-down icon5"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="sidenav__list">
+                <li class="sidenav-drop">
+                    <a href="#">
+                        <i class="fa-solid fa-circle-question center"></i>
+                        <span class="sidenav-text">Contact Support</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <main class="main-content">
+
+        <div class="main-cards">
+            <div class="card">
+                <div class="card-chart">
+                    <h5 class="text-muted chart-text">Weekly Sales<i class="fas fa-ellipsis-h fa-fw card-icon"></i></h5>
+                    <h2>MYR 4,000</h2></h4>
+                    <canvas id="barChart" style="width:200%;max-width: 600px;"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-chart">
+                    <h5 class="text-muted">Revenue this week<i class="fas fa-ellipsis-h fa-fw card-icon"></i></h5>
+                    <h2>$8,792k</h2>
+                    <canvas id="fillChart" style="width:200%;max-width: 600px;"></canvas>
+                </div>
+            </div>
+
+        </div>
+<!--        <div class="main-overview">
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Overview</div>
+                <div class="overviewcard__info">Card</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Overview</div>
+                <div class="overviewcard__info">Card</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Overview</div>
+                <div class="overviewcard__info">Card</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Overview</div>
+                <div class="overviewcard__info">Card</div>
+            </div>
+        </div>
+      -->  <!--Card-->
+       <!-- <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">Quick Access <i class="fas fa-ellipsis-h fa-fw card-icon"></i></div>
+                        <div class="table-responsive">
+                            <table class="lv-table">
+                                <tbody>
+                                <tr>
+                                    <td>Page Builder</td>
+                                    <td><i class="fas fa-arrow-right list-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Blog Post</td>
+                                    <td><i class="fas fa-arrow-right list-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Add Products</td>
+                                    <td><i class="fas fa-arrow-right list-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">Popular Products <i class="fas fa-ellipsis-h fa-fw card-icon"></i></div>
+                        <div class="table-responsive">
+                            <table class="lv-table">
+                                <tbody>
+                                <tr>
+                                    <td>Order 1</td>
+                                    <td>user@gmail.com</td>
+                                    <td>20 sold</td>
+                                </tr>
+                                <tr>
+                                    <td>Order 2</td>
+                                    <td>user@gmail.com</td>
+                                    <td>20 sold</td>
+                                </tr>
+                                <tr>
+                                    <td>Order 3</td>
+                                    <td>user@gmail.com</td>
+                                    <td>20 sold</td>
+                                </tr>
+                                <tr>
+                                    <td>Order 4</td>
+                                    <td>user@gmail.com</td>
+                                    <td>20 sold</td>
+                                </tr>
+                                <tr>
+                                    <td>Order 5</td>
+                                    <td>user@gmail.com</td>
+                                    <td>20 sold</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">Popular Products <i class="fas fa-ellipsis-h fa-fw card-icon"></i></div>
+                        <div class="table-responsive">
+                            <table class="lv-table">
+                                <tbody>
+                                <tr>
+                                    <td>Order 1</td>
+                                    <td>user@gmail.com</td>
+                                    <td><span class="badge badge-pill badge-custom">View</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Order 2</td>
+                                    <td>user@gmail.com</td>
+                                    <td><span class="badge badge-pill badge-custom">View</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Order 3</td>
+                                    <td>user@gmail.com</td>
+                                    <td><span class="badge badge-pill badge-custom">View</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Order 4</td>
+                                    <td>user@gmail.com</td>
+                                    <td><span class="badge badge-pill badge-custom">View</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Order 5</td>
+                                    <td>user@gmail.com</td>
+                                    <td><span class="badge badge-pill badge-custom">View</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                &lt;!&ndash;./row end&ndash;&gt;
+            </div>
+            &lt;!&ndash;./container end&ndash;&gt;
+    </main>-->
+    </main>
+</div>
+
+<!--External JS-->
+<script src="../js/lv-sidenav.js"></script>
+<script src="../js/lv-submenu.js"></script>
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!--External Chart JS-->
+<script src="js/lv-bar-chart.js"></script>
+<script src="js/lv-area-chart.js"></script>
+</body>
+</html>
