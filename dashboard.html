@@ -29,113 +29,127 @@
 
     <!--Top Navigation-->
     <nav class="lv-topnav">
-        <div class="search text-center px-4 py-3 mt-2 gt-search">
-            <input type="text" class="form-control w-100 border-0 bg-light" placeholder="GO-TO">
+        <div class="search text-center px-4 py-3 mt-2 goto-search" style="margin-right:-1300px; margin-left: 1300px;">
+            <input type="text" class="form-control border-0 bg-light" placeholder="GO-TO" style="width:150%; margin-top:10px;">
+            <ul class="drop"></ul>
         </div>
 
-        <i class="fa-solid fa-circle-user fa-2x"></i>
+            <i class="fas fa-bell lv-icon1"></i>
+            <i class="fas fa-info-circle lv-icon2"></i>
+            <i class="fas fa-cog lv-icon4"></i>
+            <i class="fa-solid fa-circle-user fa-2x lv-icon"></i>
+
     </nav>
+
 
     <!--Side Navigation-->
     <section class="sidenav" id="sidenav-left">
         <div class="lv-sidenav" id="left-side">
             <div class="sidenav__close-icon">
-                <i class="fas fa-times sidenav__brand-close lv-close-icon"></i>
+                <img src="img/larvee-logo-backend.png" alt="larvee-logo" class="lv-logo">
+                <i class="fas fa-bars bar" id="sidenav-toggle"></i>
             </div>
             <!--Larvee Logo-->
-            <div class="logo">
-                <img src="img/larvee-logo-backend.png" alt="larvee-logo" class="lv-logo">
-                <i class="fas fa-bars bar"></i>
+            <div class="logo logo-1">
+                <img src="img/larvee-logo-backend.png" alt="larvee-logo" class="lv-logo-1">
+
             </div>
 
             <ul class="sidenav__list">
                 <!--Search-->
                 <div class="search text-center px-4 py-3 mt-2">
-
                     <input type="text" class="form-control w-100 border-0 bg-light" placeholder="Search here">
                 </div>
+
                 <li class="sidenav-drop">
-                    <a href="#">
+                    <a href="#" style="text-decoration: none;">
                         <i class="fas fa-chart-pie "></i><span class="sidenav-text">Dashboard</span></i>
                     </a>
                 </li>
+                <div class="row lv-sidenav-label-wrapper mt-0 mb-4">
+                    <div class="col-auto lv-sidenav-label">Core</div>
+                    <div class="col ps-0">
+                        <hr class="mb-0 lv-sidenav-divider">
+                    </div>
+                </div>
+
                 <li class="sidenav-drop list-none">
-                    <a href="#" class="js-cat" id="js-cat">
+                    <a href="#"id="js-drop1" style="text-decoration: none;">
                         <i class="fas fa-shopping-cart center"></i><span class="sidenav-text">Online Store</span><i class="fas fa-chevron-down caret"></i>
-                        <ul class="sidenav__submenu list-none">
-                            <li><a href="#"></i> Customer</a></li>
-                            <li><a href="#"></i> Product</a></li>
-                            <li><a href="#"></i> Composite Product</a></li>
-                            <li><a href="#"></i> Order</a></li>
-                            <li><a href="#"></i> Payment</a></li>
+                        <ul class="sidenav__submenu list-none" id="menu1">
+                            <li><a href="#" class="menu-text" style="text-decoration: none;"></i> Customer</a></li>
+                            <li><a href="#" class="menu-text" style="text-decoration: none;"></i> Product</a></li>
+                            <li><a href="#" class="menu-text" style="text-decoration: none;"></i> Composite Product</a></li>
+                            <li><a href="#" class="menu-text" style="text-decoration: none;"></i> Order</a></li>
+                            <li><a href="#" class="menu-text" style="text-decoration: none;"></i> Payment</a></li>
                         </ul>
                     </a>
                 </li>
                 <li class="sidenav-drop">
-                    <a href="#" class="js-cate" id="js-cate">
+                    <a href="#" id="js-drop2" style="text-decoration: none;">
                         <i class="fas fa-file-alt center"></i></i><span class="sidenav-text">Page Builder</span><i class="fas fa-chevron-down icon0"></i>
-                        <ul class="sidenav__submenu">
-                            <li><a href="#"></i> Page</a></li>
-                            <li><a href="#"></i> Add Page</a></li>
-                            <li><a href="#"></i> Page Category</a></li>
-                            <li><a href="#"></i>Page Tag</a></li>
+                        <ul class="sidenav__submenu list-none" id="menu2">
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Page</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Add Page</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Page Category</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i>Page Tag</a></li>
                         </ul>
 
                     </a>
                 </li>
                 <li class="sidenav-drop">
-                    <a href="#">
+                    <a href="#" id="js-drop3" style="text-decoration: none;">
                         <i class="fas fa-edit center"></i></i><span class="sidenav-text">Blog Post</span><i class="fas fa-chevron-down icon"></i>
-                        <ul class="sidenav__submenu">
-                            <li><a href="#"></i> Blog Post</a></li>
-                            <li><a href="#"></i> Add Blog Post</a></li>
-                            <li><a href="#"></i> Post Category</a></li>
-                            <li><a href="#"></i> Post Tag</a></li>
+                        <ul class="sidenav__submenu list-none" id="menu3">
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Blog Post</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Add Blog Post</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Post Category</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Post Tag</a></li>
                         </ul>
                     </a>
                 </li>
                 <li class="sidenav-drop">
-                    <a href="#">
+                    <a href="#" id="js-drop4" style="text-decoration: none;">
                         <i class="fab fa-searchengin center "></i><span class="sidenav-text">SEO</span>
                         <i class="fas fa-chevron-down icon1"></i>
-                        <ul class="sidenav__submenu">
-                            <li><a href="#"></i> SEO Page</a></li>
-                            <li><a href="#"></i> SEO Blog Post</a></li>
-                            <li><a href="#"></i> SEO Image</a></li>
-                            <li><a href="#"></i> SEO Category</a></li>
-                            <li><a href="#"></i> SEO Product</a></li>
+                        <ul class="sidenav__submenu list-none" id="menu4">
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> SEO Page</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> SEO Blog Post</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> SEO Image</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> SEO Category</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> SEO Product</a></li>
                         </ul>
                     </a>
                 </li>
                 <li class="sidenav-drop">
-                    <a href="#">
+                    <a href="#" id="js-drop5" style="text-decoration: none;">
                         <i class="fas fa-briefcase center"></i><span class="sidenav-text">Theme</span><i class="fas fa-chevron-down icon2"></i>
-                        <!--<ul class="sidenav__submenu">
-                            <li><a href="#"></i> General</a></li>
-                            <li><a href="#"></i> Navigation</a></li>
-                            <li><a href="#"></i> Header</a></li>
-                            <li><a href="#"></i> Footer</a></li>
-                        </ul>-->
+                        <ul class="sidenav__submenu list-none" id="menu5">
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> General</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Navigation</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Header</a></li>
+                            <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Footer</a></li>
+                        </ul>
                     </a>
                 </li>
                 <li class="sidenav-drop">
-                    <a href="#">
+                    <a href="#" id="js-drop6" style="text-decoration: none;">
                         <i class="fas fa-folder center"></i><span class="sidenav-text">Form</span><i class="fas fa-chevron-down icon3"></i>
-                        <!--  <ul class="sidenav__submenu">
-                              <li><a href="#"></i> Form</a></li>
-                              <li><a href="#"></i> Add Form</a></li>
-                          </ul>-->
+                          <ul class="sidenav__submenu list-none" id="menu6">
+                              <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Form</a></li>
+                              <li><a href="#"  class="menu-text" style="text-decoration: none;"></i> Add Form</a></li>
+                          </ul>
 
                     </a>
                 </li>
                 <li class="sidenav-drop">
-                    <a href="#">
-                        <i class="fas fa-th-large center"></i></i><span class="sidenav-text">Extension</span><i class="fas fa-chevron-down icon4"></i>
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fas fa-th-large center"></i></i><span class="sidenav-text">Extension</span>
                     </a>
                 </li>
                 <li class="sidenav-drop">
-                    <a href="#">
-                        <i class="fas fa-lock  center"></i><span class="sidenav-text">Security</span><i class="fas fa-chevron-down icon5"></i>
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fas fa-lock  center"></i><span class="sidenav-text">Security</span>
                     </a>
                 </li>
 
@@ -143,7 +157,7 @@
 
             <ul class="sidenav__list">
                 <li class="sidenav-drop">
-                    <a href="#">
+                    <a href="#" style="text-decoration: none;">
                         <i class="fa-solid fa-circle-question center"></i>
                         <span class="sidenav-text">Contact Support</span>
                     </a>
@@ -153,8 +167,9 @@
 
     </section>
 
+    <!--Dashboard Main-->
     <main class="main-content">
-
+        <h2 class="dash-title">Dashboard</h2>
         <div class="main-cards">
             <div class="card">
                 <div class="card-chart">
@@ -172,30 +187,14 @@
             </div>
 
         </div>
-<!--        <div class="main-overview">
-            <div class="overviewcard">
-                <div class="overviewcard__icon">Overview</div>
-                <div class="overviewcard__info">Card</div>
-            </div>
-            <div class="overviewcard">
-                <div class="overviewcard__icon">Overview</div>
-                <div class="overviewcard__info">Card</div>
-            </div>
-            <div class="overviewcard">
-                <div class="overviewcard__icon">Overview</div>
-                <div class="overviewcard__info">Card</div>
-            </div>
-            <div class="overviewcard">
-                <div class="overviewcard__icon">Overview</div>
-                <div class="overviewcard__info">Card</div>
-            </div>
-        </div>
-      -->  <!--Card-->
-       <!-- <div class="container">
+
+
+        <!--Card-->
+      <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card">
-                        <div class="card-header">Quick Access <i class="fas fa-ellipsis-h fa-fw card-icon"></i></div>
+                        <div class="header-card">Quick Access <i class="fas fa-ellipsis-h fa-fw card-icon"></i></div>
                         <div class="table-responsive">
                             <table class="lv-table">
                                 <tbody>
@@ -291,10 +290,11 @@
                         </div>
                     </div>
                 </div>
-                &lt;!&ndash;./row end&ndash;&gt;
-            </div>
-            &lt;!&ndash;./container end&ndash;&gt;
-    </main>-->
+             <!--./row end-->
+        </div>
+           <!--/container end-->
+      </div>
+
     </main>
 </div>
 

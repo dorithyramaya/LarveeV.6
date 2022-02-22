@@ -26,28 +26,36 @@ body {
 /*Online Store Chevron*/
 .caret {
    padding-left: 37px;
+
 }
+/*Page Builder*/
 .icon0 {
     padding-left: 40px;
 }
+/*Blog Post*/
 .icon {
     padding-left: 60px;
 }
+/*SEO*/
 .icon1{
     padding-left: 95px;
 }
+/*Theme*/
 .icon2{
     padding-left: 80px;
 }
+/*Form*/
 .icon3{
     padding-left: 90px;
 }
-.icon4{
-    padding-left: 60px;
+/*Submenu hidden when sidebar active unless clicked*/
+.sidenav__submenu {
+    display:none;
 }
-.icon5{
-    padding-left: 70px;
+.bar {
+    cursor: pointer;
 }
+/*Submenu Icon*/
 i {
     display: inline-block;
     margin-right: 1em;
@@ -58,11 +66,12 @@ i {
     color: var(--lv-secondary-dark);
     font-size: 16px;
 }
+/*Menu Icon when in mobile*/
 .menu-icon {
     position: fixed; /* Needs to stay visible for all mobile scrolling */
     display: flex;
     top: 5px;
-    left: 10px;
+    left: 0px;
     align-items: center;
     justify-content: center;
 
@@ -75,7 +84,46 @@ i {
     color: var(--lv-secondary-light);
     display: inline-block;
 }
+/*Notification when fullscreen*/
+.lv-icon1{
+    padding: 10px;
+    float: right;
+    display: inline-block;
+    margin-right: -1040px;
+    margin-left: 1040px;
+    font-size: 25px;
+    cursor: pointer;
 
+}
+/*Info icon when fullscreen*/
+.lv-icon2{
+    padding: 10px;
+    float: right;
+    display: inline-block;
+    margin-right: -680px;
+    margin-left:680px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+/*Setting Icon when fullscreen*/
+.lv-icon4{
+    padding: 10px;
+    float: right;
+    display: inline-block;
+    margin-right:-320px;
+    margin-left: 320px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.lv-icon{
+    padding: 0px;
+    float: right;
+    display: inline-block;
+    margin: 0 30px 0 -30px;
+    cursor: pointer;
+}
 
 /* Give every child element its grid name */
 .lv-topnav {
@@ -83,22 +131,21 @@ i {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0px;
     background-color: var(--lv-grey);
+    margin: 0px;
 }
 
 /* Make room for the menu icon on mobile */
 .header__search {
     margin-left: 42px;
 }
-/*Side Navigation*/
+/*Side Navigation collapsed*/
 .sidenav {
     grid-area: sidenav;
     display: flex;
     flex-direction: column;
     width: 250px;
-    height:100%;
-    position: fixed;
     overflow-x: hidden;
     overflow-y: hidden;
     transform: translateX(-245px);
@@ -106,6 +153,31 @@ i {
     z-index: 2; /* Needs to sit above the hamburger menu icon */
     background-color: var(--lv-primary-light);
     margin-top: 0px;
+    height:100%;
+    position: fixed;
+    height: -webkit-calc(100% - 1px);
+    height: -moz-calc(100% - 1px);
+    height: calc(100% - 1px);
+
+}
+/*Submenu text hidden when sidebar collapsed*/
+/*
+.sidenav-text {
+    display: none;
+}
+*/
+
+.lv-sidenav-divider {
+    display: none;
+}
+/*Submenu list*/
+.list-none {
+    list-style: none;
+    margin-left: -5px;
+}
+/*Submenu text*/
+.menu-text {
+    color:var(--lv-secondary-dark);
 }
 /*Sidenav open hover*/
 .sidenav:hover {
@@ -114,15 +186,17 @@ i {
 .sidenav.active {
     transform: translateX(0);
 }
-/*Close Icon     */
+/*Close Icon in mobile*/
 .sidenav__close-icon {
     position: absolute;
     visibility: visible;
-    top: 8px;
+    top: -1px;
     right: 12px;
     cursor: pointer;
     font-size: 20px;
     color: #ddd;
+    margin-top: 50px;
+
 }
 
 .sidenav__list {
@@ -143,14 +217,48 @@ i {
 
 .main-content{
     background-color: var(--lv-grey);
-    height: 100vh;
+    height: 100%;
 }
 .main-cards {
     column-count: 1;
-    column-gap: 20px;
-    margin: 20px;
+    column-gap: 50px;
+    margin: 50px;
 }
 
+/*Divider label*/
+
+.lv-sidenav.opened .lv-sidenav--content .lv-sidenav-label {
+    min-height: 1.125rem;
+}
+
+ .lv-sidenav-label-wrapper .lv-sidenav-label {
+    color: #9da9bb;
+    font-size: .95rem;
+    padding-left: 30px;
+
+}
+
+/*Divider label show when sidebar expand upon hover*/
+/*
+.sidenav:hover  .lv-sidenav-label {
+ !*   color: #9da9bb;*!
+    font-size: .75rem;
+    display: block;
+
+}
+*/
+
+/*Divider label shows when sidebar expand*/
+.sidenav.opened  .lv-sidenav-label {
+    color: #9da9bb;
+    font-size: .75rem;
+    display: block;
+}
+
+.dash-title {
+    padding: 50px 50px 10px 50px;
+
+}
 .card {
     display: flex;
     flex-direction: column;
@@ -176,61 +284,148 @@ i {
     padding-top:50px;
     margin-left: 10px;
 }
+/*mobile*/
+
 /*Logo*/
-.lv-logo {
+.lv-logo-1 {
     width: 180px;
     height: auto;
     margin-bottom:-100px;
     margin-top:-100px;
+
+
+}
+.lv-logo{
+    width: 180px;
+    height: auto;
+    margin-bottom:-100px;
+    margin-top:-100px;
+    display: none;
 }
 /*Toggle Navigation*/
 .bar{
    margin-left: 10px;
 }
-/*Card CSS*/
-.card {
-    display:block;
-    box-sizing: border-box;
-    padding-bottom: 30px;
-    margin-bottom: 50px;
-    box-shadow: rgba(0, 0, 0,0.1);
+
+/*Card with table*/
+.card-title{
+    background-color: red;
+    padding: 50px;
 }
 
-.card .card-header {
-    background-color: var(--lv-secondary-light);
-    color:var(--lv-primary-light);
-    border-top-left-radius: 10px;
-    border-top-right-radius:10px ;
-}
+/*Table*/
 
-.card-icon {
-    float: right;
-}
-.container .card {
-    border-radius: 20px;
-}
-
-.container .card .card-header {
-    border-top-left-radius: 10px;
-    border-top-right-radius:10px ;
+table {
+    table-layout: auto;
+    width: 100%;
 
 }
 
-.main-overview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-    grid-auto-rows: 94px;
-    grid-gap: 20px;
-    margin: 20px;
+td {
+    height: 50px;
+    overflow: hidden;
+    padding-left: 20px;
+
+}
+.list-icon {
+    color:green;
+    margin-left:300px;
+}
+/* === card component ======
+ * Variation of the panel component
+ * version 2018.10.23 B
+ * https://codepen.io/jstneg/pen/EVKYZj
+ */
+.card{ background-color: #fff; border: 1px solid transparent; border-radius: 6px; }
+.card > .card-link{ color: #333; }
+.card > .card-link:hover{  text-decoration: none; }
+.card > .card-link .card-img img{ border-radius: 6px 6px 0 0; }
+.card .card-img{ position: relative; padding: 0; display: table; }
+.card .card-img .card-caption{
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+    left: 0;
+}
+.card .card-body{ display: table; width: 100%; padding: 12px; }
+.card .card-header{ border-radius: 6px 6px 0 0; padding: 8px; }
+.card .card-footer{ border-radius: 0 0 6px 6px; padding: 8px; }
+.card .card-left{ position: relative; float: left; padding: 0 0 8px 0; }
+.card .card-right{ position: relative; float: left; padding: 8px 0 0 0; }
+.card .card-body h1:first-child,
+.card .card-body h2:first-child,
+.card .card-body h3:first-child,
+.card .card-body h4:first-child,
+.card .card-body .h2
+{ margin-top: 0; }
+.card .card-body .heading{ display: block; }
+
+.card .card-body .lead{ text-align: center; }
+
+@media( min-width: 768px ){
+    .card .card-left{ float: left; padding: 0 8px 0 0; }
+    .card .card-right{ float: left; padding: 0 0 0 8px; }
+
+    .card .card-4-8 .card-left{ width: 33.33333333%; }
+    .card .card-4-8 .card-right{ width: 66.66666667%; }
+
+    .card .card-5-7 .card-left{ width: 41.66666667%; }
+    .card .card-5-7 .card-right{ width: 58.33333333%; }
+
+    .card .card-6-6 .card-left{ width: 50%; }
+    .card .card-6-6 .card-right{ width: 50%; }
+
+    .card .card-7-5 .card-left{ width: 58.33333333%; }
+    .card .card-7-5 .card-right{ width: 41.66666667%; }
+
+    .card .card-8-4 .card-left{ width: 66.66666667%; }
+    .card .card-8-4 .card-right{ width: 33.33333333%; }
 }
 
-.overviewcard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #d3d3;
+/* -- default theme ------ */
+.card-default{
+    border-color: #ddd;
+    background-color: #fff;
+    margin-bottom: 24px;
 }
+.card-default > .card-header,
+.card-default > .card-footer{ color: #333; background-color: #fdfdfd; }
+.card-default > .card-header{ border-bottom: 1px solid #ddd; padding: 8px; }
+.card-default > .card-footer{ border-top: 1px solid #ddd; padding: 8px; }
+.card-default > .card-body{  }
+.card-default > .card-img:first-child img{ border-radius: 6px 6px 0 0; }
+.card-default > .card-left{ padding-right: 4px; }
+.card-default > .card-right{ padding-left: 4px; }
+.card-default p:last-child{ margin-bottom: 0; }
+.card-default .card-caption { color: #fff; text-align: center; text-transform: uppercase; }
+
+
+/* -- price theme ------ */
+.card-price{ border-color: #999; background-color: #ededed; margin-bottom: 24px; }
+.card-price > .card-heading,
+.card-price > .card-footer{ color: #333; background-color: #fdfdfd; }
+.card-price > .card-heading{ border-bottom: 1px solid #ddd; padding: 8px; }
+.card-price > .card-footer{ border-top: 1px solid #ddd; padding: 8px; }
+.card-price > .card-img:first-child img{ border-radius: 6px 6px 0 0; }
+.card-price > .card-left{ padding-right: 4px; }
+.card-price > .card-right{ padding-left: 4px; }
+.card-price .card-caption { color: #fff; text-align: center; text-transform: uppercase; }
+.card-price p:last-child{ margin-bottom: 0; }
+
+.card-price .price{
+    text-align: center;
+    color: #337ab7;
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 0.7em;
+    margin: 24px 0 16px;
+}
+.card-price .price small{ font-size: 0.4em; color: #66a5da; }
+.card-price .details{ list-style: none; margin-bottom: 24px; padding: 0 18px; }
+.card-price .details li{ text-align: center; margin-bottom: 8px; }
+.card-price .buy-now{ text-transform: uppercase; }
+.card-price table .price{ font-size: 1.2em; font-weight: 700; text-align: left; }
+.card-price table .note{ color: #666; font-size: 0.8em; }
 
 /* Non-mobile styles, 750px breakpoint */
 @media only screen and (min-width: 46.875em) {
@@ -254,8 +449,9 @@ i {
     .sidenav__close-icon {
         visibility: hidden;
     }
-}
 
+
+}
 
 /* Medium screens breakpoint (1050px) */
 @media only screen and (min-width: 65.625em) {
@@ -264,3 +460,25 @@ i {
         column-count: 2;
     }
 }
+/*Responsive Card*/
+@media (min-width: 576px) {
+    .lv-card .card {
+        -ms-flex: 0 0 48.7%;
+        flex: 0 0 48.7%;
+    }
+}
+
+@media (min-width: 768px) {
+    .lv-card .card {
+        -ms-flex: 0 0 32%;
+        flex: 0 0 32%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lv-card .card {
+        -ms-flex: 0 0 24%;
+        flex: 0 0 24%;
+    }
+}
+
